@@ -15,6 +15,7 @@ var gameResult = ""
 var scoreWin = document.getElementById("wins");
 var scoreLoss = document.getElementById("losses");
 var scoreTie = document.getElementById("ties");
+var reset = document.getElementById("reset");
 
 var choiceOne = document.getElementById("choice-one");
 var choiceTwo = document.getElementById("choice-two");
@@ -38,6 +39,12 @@ choiceThree.addEventListener("click", function() {
   playGame(playerChoice);
   score(gameResult);
 });
+reset.addEventListener("click", function() {
+  wins = 0
+  losses = 0
+  ties = 0
+  score();
+})
 
 function makeChoice(choice) {
   return playerChoice = choices[choice]
@@ -115,6 +122,8 @@ function score(gameResult) {
     case "Tie":
       ties += 1;
       scoreTie.innerHTML = "Ties: " + ties;
+      break;
+    default:
       break;
   }
 }

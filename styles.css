@@ -2,3 +2,15 @@ img {
   height: 50px;
   width: 50px;
 }
+
+.win {
+  color: green;
+}
+
+.loss {
+  color: red;
+}
+
+.tie {
+  color: blue;
+}
